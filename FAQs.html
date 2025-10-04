@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Booking - FAQ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+    }
+    /* Navigation Bar Styles */
+    .navbar {
+      background: #0984e3;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      box-shadow: 1px 2px 8px rgba(0,0,0,0.5);
+      text-decoration: none;
+    }
+    .navbar .logo {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+    .navbar-links {
+      display: flex;
+      gap: 25px;
+    }
+    .navbar-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 14px;
+      border-radius: 4px;
+    }
+    .navbar-links a:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+
+    /* --- CSS for FAQ Section --- */
+    .faq-section {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 15px;
+        text-align: left;
+    }
+    .faq-section h2 {
+        text-align: center;
+        color: #2d3436;
+        margin-bottom: 30px;
+    }
+    .faq-item {
+        background: #fff;
+        border: 1px solid #dfe6e9;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .faq-item summary {
+        font-weight: bold;
+        font-size: 1.1em;
+        padding: 15px 20px;
+        cursor: pointer;
+        outline: none;
+        list-style: none; /* Hide default triangle */
+        position: relative;
+        color: #2d3436;
+    }
+    .faq-item summary::-webkit-details-marker {
+        display: none;
+    }
+    .faq-item summary::after { /* Custom +/- icon */
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-size: 1.5em;
+        line-height: 1;
+        transition: transform 0.2s ease-in-out;
+        color: #0984e3;
+    }
+    .faq-item[open] > summary::after {
+        transform: rotate(45deg);
+    }
+    .faq-item .faq-answer {
+        padding: 0 20px 15px 20px;
+        margin: 0;
+        font-size: 1em;
+        color: #636e72;
+        line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="logo">Hotel Booking</a>
+    <div class="navbar-links">
+      <a href="hotels.html">View Hotels</a>
+      <a href="location.html">Find Hotels by City</a>
+      <a href="booking.html">Book a Room</a>
+      <a href="offers.html">Offers</a>
+      <a href="byplace.html">Near Tourist Place</a>
+      <a href="hotel-360.html">View hotel in 360°</a>
+      <a href="faq.html">FAQ</a>
+      <a href="aboutUS.html">About Us</a>
+      <a href="SingUp.html">Sign Up</a>
+    </div>
+  </nav>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    
+    <details class="faq-item">
+      <summary>What are the check-in and check-out times?</summary>
+      <p class="faq-answer">The standard check-in time is 2:00 PM IST, and check-out is 12:00 PM IST. Early check-in or late check-out may be available upon request and is subject to availability.</p>
+    </details>
+    
+    <details class="faq-item">
+      <summary>Is parking available at the hotels?</summary>
+      <p class="faq-answer">Yes, most hotels listed on our platform offer on-site parking for guests, which is often complimentary. Please check the specific hotel's amenities list for confirmation.</p>
+    </details>
+    
+    <details class="faq-item">
+      <summary>What is the cancellation policy?</summary>
+      <p class="faq-answer">Cancellation policies vary by hotel and the rate type you've booked. You can find the detailed cancellation policy for your specific booking in your confirmation email and on the hotel's page before confirming your reservation.</p>
+    </details>
+
+    <details class="faq-item">
+      <summary>Do you offer airport shuttle services?</summary>
+      <p class="faq-answer">Some hotels provide airport shuttle services, either as a complimentary service or for an additional fee. This information is available in the hotel details section on the booking page.</p>
+    </details>
+  </div>
+
+<script>
+    // --- FAQ Logic ---
+    const allFaqs = document.querySelectorAll('.faq-item');
+    allFaqs.forEach(faq => {
+        faq.addEventListener('toggle', () => {
+            if (faq.open) {
+                allFaqs.forEach(otherFaq => {
+                    if (otherFaq !== faq && otherFaq.open) {
+                        otherFaq.open = false;
+                    }
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

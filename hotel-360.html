@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>360° Room Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ecf0f1;
+    }
+h1 {
+  background: #0984e3;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+    #viewer {
+
+     
+      border-bottom: 4px solid #0984e3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .section-title {
+      text-align: center;
+      color: #0984e3;
+      margin: 10px 0 10px 0;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+    }
+    .map-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+       gap: 40px;
+      padding: 30px 0 40px 0; 
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-radius: 0 0 16px 16px;
+    }
+    .hotel-iframe-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #f5f6fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      padding: 18px 18px 12px 18px;
+      min-width: 340px;
+      max-width: 400px;
+    }
+    .hotel-name {
+      font-size: 1.2em;
+      color: #2d3436;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    iframe {
+      width: 100%;
+      min-width: 300px;
+      max-width: 360px;
+      height: 250px;
+      border: 2px solid #0984e3;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    @media (max-width: 900px) {
+      .map-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+      }
+      .hotel-iframe-block {
+        min-width: 220px;
+        max-width: 98vw;
+      }
+      iframe {
+        min-width: 180px;
+        max-width: 98vw;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/photo-sphere-viewer@5/dist/photo-sphere-viewer.css">
+</head>
+<body>
+
+<h1>🛏️ 360° View of Hotel Room</h1>
+<div id="viewer"></div>
+
+<div class="section-title">Explore Our Hotels in 360°</div>
+<div class="map-container">
+  <div class="hotel-iframe-block">
+    <div class="hotel-name">Hotel Hillock, Mumbai</div>
+    <iframe
+      src="https://momento360.com/e/u/a4151c6cda3149e28e68efc10ee6414f?utm_campaign=embed&utm_source=other&heading=77.59&pitch=4.09&field-of-view=72.88&size=medium&display-plan=true"
+      allowfullscreen
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+  <div class="hotel-iframe-block">
+    <div class="hotel-name">Mountain View Hotel, Manali</div>
+    <iframe
+      src="https://momento360.com/e/u/535aabbd38be48799f73dc69613b85d1?utm_campaign=embed&utm_source=other&heading=0&pitch=0&field-of-view=75&size=medium&display-plan=true"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+
+</body>
+</html>

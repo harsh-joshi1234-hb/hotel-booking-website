@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>City-Based Hotels</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      color: #0984e3;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 2em;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #636e72;
+      text-align: center;
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #dfe6e9;
+      margin: 30px 0;
+      max-width: 700px;
+    }
+     img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    h2 {
+      color: #2d3436;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: 0 auto 20px auto;
+    }
+    ul li {
+      background: #fff;
+      margin-bottom: 18px;
+      padding: 18px 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      font-size: 1.1em;
+      color: #2d3436;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    ul li b {
+      color: #0984e3;
+      font-size: 1.1em;
+    }
+    a {
+      text-decoration: none;
+    }
+    button {
+      background: #0984e3;
+      color: #fff;
+      border: none;
+      padding: 8px 22px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+    /* City selector list */
+    ul:first-of-type {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+      background: none;
+      box-shadow: none;
+      padding: 0;
+    }
+    ul:first-of-type li {
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      margin: 0;
+      font-size: 1.1em;
+    }
+    ul:first-of-type a {
+      color: #0984e3;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+    ul:first-of-type a:hover {
+      color: #2d3436;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>City-Based Hotels</h1>
+  <p>Choose your destination and book your stay easily!</p>
+
+  <hr>
+
+  <h2>Select a City:</h2>
+  <ul>
+    <li><a href="#delhi">Delhi</a></li>
+    <li><a href="#mumbai">Mumbai</a></li>
+    <li><a href="#jaipur">Jaipur</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="delhi">Hotels in Delhi</h2>
+  <ul>
+    <li>
+      <b>Royal Palace Delhi</b><br>
+      ₹2,999/night<br>
+      <img src="https://htl-img-res-new.s3.ap-south-1.amazonaws.com/7208/20241130/main.jpg" alt="Hotel near Gateway">
+       <a href="noaccount.html">
+      <button>Book Now</button>
+    </a>
+    </li>
+    <li>
+      <b>Green Garden Hotel</b><br>
+      ₹1,899/night<br>
+      <img src="https://3.imimg.com/data3/JV/KJ/MY-15827078/hotels-booking.jpg"  alt="Hotel near Gateway">
+       <a href="noaccount.html">
+      <button>Book Now</button>
+    </a>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="mumbai">Hotels in Mumbai</h2>
+  <ul>
+    <li>
+      <b>Sea View Inn</b><br>
+      ₹3,499/night<br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOBIqkOz82-lNlRZ87DbGf842my51StiODg&s" alt="Sea View Inn">
+       <a href="noaccount.html">
+      
+      <button>Book Now</button>
+    </a>
+    </li>
+    <li>
+      <b>Sunshine Residency</b><br>
+      ₹2,299/night<br>
+      <img src="https://htl-img-res-new.s3.ap-south-1.amazonaws.com/7208/20241130/main.jpg" alt="">
+       <a href="noaccount.html">
+      <button>Book Now</button>
+    </a>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2 id="jaipur">Hotels in Jaipur</h2>
+  <ul>
+    <li>
+      <b>Pink City Palace</b><br>
+      ₹2,499/night<br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRf-0DHohhqy6bRiwTgCYFYZHPqF1AHTQhJQ&s" alt="Hotel near Charminar">
+       <a href="noaccount.html">
+      <button>Book Now</button>
+    </a>
+    </li>
+    <li>
+      <b>Jaipur Grand Heritage</b><br>
+      ₹3,199/night<br>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOBIqkOz82-lNlRZ87DbGf842my51StiODg&s" alt="Hotel near Mysore Palace">
+       <a href="noaccount.html">
+      <button>Book Now</button>
+    </a>
+    </li>
+  </ul>
+
+</body>
+</html>

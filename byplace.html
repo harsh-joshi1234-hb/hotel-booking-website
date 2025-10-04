@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotels Near Tourist Places</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2e86de;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    /* Navigation Bar Styles */
+    .navbar_main {
+      background: #0984e3;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      box-shadow: 1px 2px 8px rgba(0,0,0,0.5);
+      text-decoration: none;
+    }
+    .navbar_main .logo {
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+    /* CORRECTED: Changed selector to match HTML */
+    .navbar-links {
+      display: flex;
+      gap: 25px;
+    }
+    .navbar-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 14px;
+      border-radius: 4px;
+    
+    }
+    .navbar-links a:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+
+    .navbar_places { /* Added specific class for clarity */
+      background-color: #dfe6e9;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .navbar_places a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #2e86de;
+      font-weight: bold;
+    }
+
+    .navbar_places a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    .hotel {
+      background-color: white;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 700px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .hotel img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .hotel h3 {
+      margin-top: 10px;
+      color: #333;
+    }
+
+    .hotel p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    h2 {
+      color: #2d3436;
+      margin-bottom: 10px;
+    }
+
+    hr {
+      border: none;
+      border-top: 4px solid #090a0a;
+      margin: 0px 0;
+    }
+  </style>
+</head>
+<body>
+
+ 
+  <nav class="navbar_main">
+    <a href="index.html" class="logo">Hotel Booking</a>
+    <div class="navbar-links">
+      <a href="hotels.html">View Hotels</a>
+      <a href="location.html">Find Hotels by City</a>
+      <a href="booking.html">Book a Room</a>
+      <a href="offers.html">Offers</a>
+      <a href="byplace.html">Near Tourist Place</a>
+      <a href="hotel-360.html">View hotel in 360°</a>
+      <a href="aboutUS.html">About Us</a>
+      <a href="SingUp.html">Sign Up</a>
+      <a href="faq.html">FAQs</a>
+    </div>
+  </nav>
+ <hr>
+   <header>
+    <h1>🏨 Hotels Near Famous Tourist Places</h1>
+  </header>
+  <nav class="navbar_places">
+    <a href="#tajmahal">Taj Mahal</a>
+    <a href="#indiagate">India Gate</a>
+    <a href="#gateway">Gateway of India</a>
+    <a href="#charminar">Charminar</a>
+    <a href="#mysore">Mysore Palace</a>
+  </nav>
+
+  <section id="tajmahal">
+
+    <h2>Hotels Near Taj Mahal (Agra)</h2>
+
+    <div class="hotel">
+      <img src=" https://assets.minorhotels.com/image/upload/q_auto,f_auto,c_limit,w_1045/media/minor/anantara/images/anantara-jewel-bagh-jaipur-hotel/mhg/01_hotel-teaser/anantara_jewel-bagh_jaipur_hotel_teaser_01_880x620.jpg" alt="Hotel near Taj Mahal">
+      <h3>Hotel Taj View</h3>
+      <p>📍 500m from Taj Mahal</p>
+      <p>💰 ₹1,999/night</p>
+      <p>🎁 Free breakfast + 10% off</p>
+    </div>
+
+    <div class="hotel">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCOBIqkOz82-lNlRZ87DbGf842my51StiODg&s" alt="Hotel Agra Palace">
+      <h3>Agra Palace</h3>
+      <p>📍 800m from Taj Mahal</p>
+      <p>💰 ₹2,299/night</p>
+      <p>🎁 20% off on online booking</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="indiagate">
+    <h2>Hotels Near India Gate (Delhi)</h2>
+
+    <div class="hotel">
+      <img src="https://3.imimg.com/data3/JV/KJ/MY-15827078/hotels-booking.jpg" alt="Hotel near India Gate">
+      <h3>City Stay Inn</h3>
+      <p>📍 1km from India Gate</p>
+      <p>💰 ₹2,499/night</p>
+      <p>🎁 Free city tour included</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="gateway">
+    <h2>Hotels Near Gateway of India (Mumbai)</h2>

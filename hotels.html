@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Listings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+    }
+    .back-btn {
+      margin: 20px 0 0 20px;
+      display: inline-block;
+    }
+    .back-btn button {
+      background: #0984e3;
+      color: #fff;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .back-btn button:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+    h1 {
+      color: #2d3436;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .hotel-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      margin: 30px auto;
+      max-width: 700px;
+      padding: 30px 30px 20px 30px;
+      display: flex;
+      align-items: flex-start;
+      gap: 25px;
+      transition: transform 0.3s ease;
+    }
+    .hotel-card:hover {
+      transform: scale(1.03);
+    }
+    .hotel-images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hotel-images img {
+      border-radius: 8px;
+      width: 180px;
+      object-fit: cover;
+    }
+    .hotel-info {
+      flex: 1;
+    }
+    .hotel-info h3 {
+      margin: 0 0 10px 0;
+      color: #0984e3;
+    }
+    .hotel-info p {
+      margin: 5px 0;
+      color: #636e72;
+      font-size: 1.1em;
+    }
+    .hotel-info a button {
+      background: #0984e3;
+      color: #fff;
+      border: none;
+      padding: 10px 28px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s;
+    }
+    .hotel-info a button:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #dfe6e9;
+      margin: 40px 0;
+      max-width: 700px;
+    }
+    .book-link {
+      display: block;
+      text-align: center;
+      margin: 40px 0 20px 0;
+    }
+    .book-link a {
+      background: #0984e3;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      transition: background 0.2s;
+    }
+    .book-link a:hover {
+      background: #74b9ff;
+      color: #2d3436;
+    }
+  </style>
+</head>
+<body>
+  <div class="back-btn">
+    <a href="index.html"><button>&larr; Back</button></a>
+  </div>
+  <center>
+    <h1>Available Hotels</h1>
+  </center>
+
+  <div class="hotel-card">
+    <div class="hotel-images">
+      <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/385388071.jpg?k=de0b51f296a3d9431866b51b974921c9ebb50cacf08eb55c1eec1d468849ffe2&o=&hp=1" height="120" alt="Hotel Hillock">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL09Bq29kE-ymkV4uo3O8aPBpM2vxYgGUqlA&s" height="80" alt="rooms">
+    </div>
+    <div class="hotel-info">
+      <h3>Hotel Hillock</h3>
+      <p>Location: Mumbai</p>
+      <p>Price: ₹2000 per night</p>
+      <a href="noaccount.html">
+        <button>Book Now</button>
+      </a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="hotel-card">
+    <div class="hotel-images">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/ba/d8/a7/hotel-mountview.jpg?w=900&h=500&s=1" height="120" alt="Hotel Moutview">
+      <img src="https://pix10.agoda.net/hotelImages/111340/-1/1c61202ab099f188a510be1560d637f6.jpg?ce=0&s=414x232" height="80" alt="rooms">
+    </div>
+    <div class="hotel-info">
+      <h3>Mountain View Hotel</h3>
+      <p>Location: Manali</p>
+      <p>Price: ₹2500 per night</p>
+      <a href="noaccount.html">
+        <button>Book Now</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="book-link">
+    <a href="booking.html">Book Now</a>
+  </div>
+</body>
+</html>

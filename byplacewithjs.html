@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hotels Near Tourist Places</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      background-color: #5c6bc0;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    select, input[type="submit"] {
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #43a047;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hotel-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+      justify-content: center;
+    }
+
+    .hotel-card {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      display: none;
+    }
+
+    .hotel-card.show {
+      display: block;
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .hotel-info {
+      padding: 15px;
+    }
+
+    .hotel-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .hotel-location {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .hotel-price {
+      color: #2e7d32;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .hotel-offer {
+      color: #c62828;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🏨 Hotels Near Tourist Places</h1>
+
+    <form onsubmit="showHotels(); return false;">
+      <label for="place">Select a Tourist Place:</label>
+      <select id="place" name="place">
+        <option value="tajmahal">Taj Mahal (Agra)</option>
+        <option value="indiagate">India Gate (Delhi)</option>
+        <option value="gatewayofindia">Gateway of India (Mumbai)</option>
+        <option value="mysorepalace">Mysore Palace (Karnataka)</option>
+        <option value="charminar">Charminar (Hyderabad)</option>
+      </select>
+      <input type="submit" value="Find Hotels">
+    </form>
+
+    <div class="hotel-list">
+      <!-- Taj Mahal Hotels -->
+       <div class="hotel-card tajmahal">
+        <img src="https://via.placeholder.com/300x180?text=Agra+Hotel" alt="Agra hotel">
+        <div class="hotel-info">
+          <div class="hotel-title">Hotel Taj Inn</div>
+          <div class="hotel-location">Near Taj Mahal, Agra</div>
+          <div class="hotel-price">₹1,800/night</div>
+          <div class="hotel-offer">20% off for couples</div>
+        </div>
+      </div> 
+
+      <!-- India Gate Hotels -->
+       <div class="hotel-card indiagate">
+        <img src="https://via.placeholder.com/300x180?text=Delhi+Hotel" alt="Delhi hotel">
+        <div class="hotel-info">
+          <div class="hotel-title">City Stay Delhi</div>
+          <div class="hotel-location">1km from India Gate</div>
+          <div class="hotel-price">₹2,300/night</div>
+          <div class="hotel-offer">Free breakfast included</div>
+        </div>
+      </div> 
+
+      <!-- Gateway of India Hotels-->
+      <div class="hotel-card gatewayofindia">
+        <img src="https://via.placeholder.com/300x180?text=Mumbai+Hotel" alt="Mumbai hotel">
+        <div class="hotel-info">
+          <div class="hotel-title">Sea Breeze Hotel</div>
+          <div class="hotel-location">Near Gateway of India</div>
+          <div class="hotel-price">₹3,000/night</div>
+          <div class="hotel-offer">10% off online booking</div>
+        </div>
+      </div>
+
+      <!-- Mysore Palace Hotels -->
+     <div class="hotel-card mysorepalace">
+        <img src="https://via.placeholder.com/300x180?text=Mysore+Hotel" alt="Mysore hotel">
+        <div class="hotel-info">
+          <div class="hotel-title">Royal Mysore Hotel</div>
+          <div class="hotel-location">Close to Mysore Palace</div>
+          <div class="hotel-price">₹2,000/night</div>
+          <div class="hotel-offer">Free guided tour</div>
+        </div> 
+      </div> 
+
+      <!-- Charminar Hotels-->
+      <div class="hotel-card charminar">
+        <img src="https://via.placeholder.com/300x180?text=Hyderabad+Hotel" alt="Hyderabad hotel">
+        <div class="hotel-info">
+          <div class="hotel-title">Charminar Residency</div>
+          <div class="hotel-location">500m from Charminar</div>
+          <div class="hotel-price">₹1,600/night</div>
+          <div class="hotel-offer">Buy 2 nights, get 1 free</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showHotels() { 
+   var selected = document.getElementById("place").value;
+      var cards = document.querySelectorAll(".hotel-card");
+
+      cards.forEach(function(card) {
+        if (card.classList.contains(selected)) {
+          card.classList.add("show");
+        } else {
+          card.classList.remove("show");
+        }
+      });
+    }
+  </script> 
+
+</body>
+</html>
